@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        mainBg: "#ffffea",
+        mainBg: "#F7F7FA",
         mainBlue: {
           100: "#edf2fa",
           200: "#d7e3fc",
@@ -24,7 +24,10 @@ export default {
           200: "#7971ea",
           300: "#ffffea",
           400: "#0E538C",
+          500: "#3D63EA",
         },
+        primaryText: "#1A202C",
+        secondaryText: "#4A5568",
         cusGreen: "#99ffcd",
       },
     },
@@ -61,6 +64,16 @@ export default {
       },
       themes: {
         light: {
+          colors: {
+            background: "#FFFFFF", // or DEFAULT
+            foreground: "#11181C", // or 50 to 900 DEFAULT
+            primary: {
+              //... 50 to 900
+              foreground: "#FFFFFF",
+              DEFAULT: "#3D63EA",
+            },
+            // ... rest of the colors
+          },
           layout: {
             hoverOpacity: 0.8, //  this value is applied as opacity-[value] when the component is hovered
             boxShadow: {
