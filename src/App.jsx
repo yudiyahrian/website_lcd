@@ -15,9 +15,9 @@ import Contact from "./pages/Contact";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/" exact element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="profile" element={<Profile />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="products" element={<Products />} />
       <Route path="services" element={<Services />} />
       <Route path="internship" element={<Internship />} />

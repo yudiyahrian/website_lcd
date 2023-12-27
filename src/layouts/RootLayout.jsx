@@ -9,7 +9,7 @@ export default function RootLayout() {
   return (
     <div className="root-layout">
       <NavBar />
-      <main className="px-10 py-8">
+      <main className="py-8">
         <AnimatePresence mode="wait" initial={false}>
           {element && React.cloneElement(element, { key: pathname })}
         </AnimatePresence>

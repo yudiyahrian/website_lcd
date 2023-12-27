@@ -10,6 +10,8 @@ export default {
     extend: {
       colors: {
         mainBg: "#F7F7FA",
+        secondaryBg: "#F9F9FF",
+        cardBg: "#FAFAFA",
         mainBlue: {
           100: "#edf2fa",
           200: "#d7e3fc",
@@ -29,6 +31,10 @@ export default {
         primaryText: "#1A202C",
         secondaryText: "#4A5568",
         cusGreen: "#99ffcd",
+      },
+      boxShadow: {
+        cardShadow: "0 4px 30px 0 rgba(0,0,0,0.05)",
+        activeCardShadow: "0 4px 30px 0 rgba(0,0,0,0.1)",
       },
     },
   },
