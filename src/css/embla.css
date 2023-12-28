@@ -1,0 +1,123 @@
+.embla {
+  padding: 1.6rem;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.embla__slide {
+  /* flex: 0 0 var(--slide-size); */
+  min-width: calc(100% / 1);
+  padding-left: 25px;
+  padding-right: 25px;
+  position: relative;
+}
+
+.embla__button {
+  -webkit-appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.embla__buttons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.6rem;
+}
+.embla__button {
+  z-index: 1;
+  color: rgb(249, 249, 249);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+}
+.embla__button:disabled {
+  opacity: 0.3;
+}
+.embla__button__svg {
+  width: 65%;
+  height: 65%;
+}
+.embla__dot {
+  -webkit-appearance: none;
+  background-color: white;
+  touch-action: manipulation;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.embla__dots {
+  z-index: 1;
+  bottom: 1.6rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.embla__dot {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  align-items: center;
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 50%;
+}
+
+.embla__dot:after {
+  background: rgb(249, 249, 249);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  content: "";
+  display: block;
+}
+.embla__dot--selected:after {
+  background: linear-gradient(
+    292deg,
+    rgba(0, 214, 196, 1) 0%,
+    rgba(14, 83, 140, 1) 100%
+  );
+}
+
+@media (min-width: 640px) {
+  .embla__slide {
+    /* flex: 0 0 var(--slide-size); */
+    min-width: calc(100% / 2);
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+  }
+}
+
+@media (min-width: 1024px) {
+  .embla__slide {
+    /* flex: 0 0 var(--slide-size); */
+    min-width: calc(100% / 4);
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+  }
+}

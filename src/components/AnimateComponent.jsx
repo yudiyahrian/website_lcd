@@ -56,12 +56,7 @@ export function StaggeredAnimation({ children }) {
   };
 
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-    >
+    <motion.div variants={container} initial="hidden" exit="exit">
       {children}
     </motion.div>
   );
