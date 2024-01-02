@@ -23,7 +23,7 @@ export function FadeIn({ children }) {
       {children && (
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ type: "tween", duration: 0.2 }}
         >
@@ -56,7 +56,12 @@ export function StaggeredAnimation({ children }) {
   };
 
   return (
-    <motion.div variants={container} initial="hidden" exit="exit">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      exit="exit"
+    >
       {children}
     </motion.div>
   );

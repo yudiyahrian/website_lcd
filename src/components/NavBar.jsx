@@ -18,7 +18,6 @@ export default function App() {
     { name: "Profile", path: "/profile" },
     { name: "Products", path: "/products" },
     { name: "Services", path: "/services" },
-    { name: "Internship", path: "/internship" },
     { name: "Contact", path: "/contact" },
   ];
 

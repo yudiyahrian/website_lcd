@@ -4,7 +4,7 @@ const Card = ({ icon, title, content, isActive }) => {
       <div
         className={`p-[1px] rounded-[8px] flex justify-center items-center mb-16 sm:mb-20 lg:mb-24 transition-all ${
           isActive
-            ? `bg-gradient-to-bl from-[#00D6C4] to-[#0E538C] translate-y-8 shadow-activeCardShadow`
+            ? `bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 translate-y-8 shadow-activeCardShadow`
             : "bg-cardBg shadow-cardShadow"
         }`}
       >
@@ -12,7 +12,7 @@ const Card = ({ icon, title, content, isActive }) => {
           <div
             className={`rounded-full w-[58px] h-[58px] p-[1px] transition-all ${
               isActive
-                ? "bg-gradient-to-bl from-[#00D6C4] to-[#0E538C]"
+                ? "bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400"
                 : "bg-gradient-to-bl from-[#F36380] to-[#57007B]"
             } `}
           >
@@ -24,14 +24,14 @@ const Card = ({ icon, title, content, isActive }) => {
           <span
             className={`bg-clip-text transition-all ${
               isActive
-                ? `text-transparent bg-gradient-to-bl from-[#00D6C4] to-[#0E538C]`
-                : "text-[#2D3748] line-clamp-1"
+                ? `text-transparent bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400`
+                : "text-headerText line-clamp-1"
             }`}
           >
             <p className="font-semibold text-lg sm:text-xl">{title}</p>
           </span>
 
-          <p className="font-normal text-xs sm:text-sm text-[#718096]">
+          <p className="font-normal text-xs sm:text-sm text-secondaryText line-clamp-5">
             {content}
           </p>
         </div>

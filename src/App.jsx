@@ -10,7 +10,6 @@ import RootLayout from "./layouts/RootLayout";
 import Profile from "./pages/Profile";
 import Products from "./pages/Products";
 import Services from "./pages/Services";
-import Internship from "./pages/Internship";
 import Contact from "./pages/Contact";
 
 const router = createBrowserRouter(
@@ -20,7 +19,6 @@ const router = createBrowserRouter(
       <Route path="/profile" element={<Profile />} />
       <Route path="products" element={<Products />} />
       <Route path="services" element={<Services />} />
-      <Route path="internship" element={<Internship />} />
       <Route path="contact" element={<Contact />} />
       {/* 
       <Route path="help" element={<HelpLayout />}>

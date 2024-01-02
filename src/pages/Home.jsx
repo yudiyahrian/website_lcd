@@ -1,4 +1,5 @@
 import headerImage from "../assets/header.svg";
+import arrowRight from "../assets/arrow_right.svg";
 import Ellipse from "../assets/Ellipse.svg";
 import decoArrowUp from "../assets/deco_arrow_up.svg";
 import decoArrowDown from "../assets/deco_arrow_down.svg";
@@ -7,7 +8,12 @@ import { Button } from "@nextui-org/react";
 import "@nextui-org/ripple";
 import { StaggeredAnimation, FadeIn } from "../components/AnimateComponent";
 import { services } from "../data/services";
-import EmblaCarousel from "../components/EmblaCarousel";
+import { EmblaCarousel, Internship } from "../components/Carousel";
+import Product from "../components/Product";
+import { products } from "../data/Products";
+import { internship } from "../data/Internship";
+import TechStack from "../components/TechStack";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const item = {
@@ -31,24 +37,20 @@ export default function Home() {
           <StaggeredAnimation>
             <motion.h1
               variants={item}
-              className="text-3xl lg:text-4xl text-left font-light text-primaryText"
+              className="text-3xl lg:text-4xl text-left font-extrabold text-primaryText"
             >
-              Great{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-darkerBlue-400 to-darkerBlue-400/40 font-bold">
-                Product
-              </span>{" "}
-              is <span className="font-extrabold">built by great</span>{" "}
+              Light Code
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-darkerBlue-400/40 to-darkerBlue-400 font-bold">
                 {" "}
-                teams{" "}
+                Digital
               </span>
             </motion.h1>
             <motion.p
               variants={item}
               className="my-7 sm:my-10 text-sm sm:text-base text-left text-secondaryText"
             >
-              We help build and manage a team of world-class developers to bring
-              your vision to life
+              Memberikan solusi untuk semua kebutuhan bisnis Anda terkait
+              Teknologi INFORMASI
             </motion.p>
             <div className="flex items-center justify-center sm:justify-start">
               <MotionButton
@@ -89,22 +91,68 @@ export default function Home() {
           className="absolute -bottom-20 md:-bottom-[11.5rem] left-[15%] w-28 md:w-auto"
         />
       </section>
-      <section id="recent-product">
+      <section id="recent-product" className="px-20 mb-10">
         <div className="w-full">
           <div
             id="header-recent-product"
-            className="flex items-center flex-col"
+            className="flex items-center flex-col mb-8"
           >
-            <div className="w-16 h-1 bg-gradient-to-bl from-[#F36380] to-[#57007B] mb-4" />
-            <h1 className="text-xl lg:text-2xl font-normal text-center text-primaryText">
+            <div className="w-16 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4" />
+            <h1 className="text-2xl lg:text-3xl font-normal text-center text-primaryText">
               Our recent <br className="block mt-2 content-['']" />
-              <span className="text-xl lg:text-2xl font-bold text-primaryText">
+              <span className="text-2xl lg:text-3xl font-bold text-primaryText">
                 Products
               </span>
             </h1>
           </div>
+          <div id="product-list">
+            {products.map((product, index) => (
+              <Product
+                key={index}
+                background={product.background}
+                backgroundImage={product.backgroundImage}
+                image={product.image}
+                title={product.title}
+                description={product.description}
+              />
+            ))}
+          </div>
+          <div className="flex justify-end">
+            <p className="font-semibold text-base md:text-lg text-transparent bg-clip-text bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mr-3 sm:mr-4">
+              Read more our products
+            </p>
+            <img src={arrowRight} alt="arrow_right" />
+          </div>
         </div>
       </section>
+      <section
+        id="our-tech-stack"
+        className="relative w-full bg-secondaryBg mb-32"
+      >
+        <img src={Ellipse} className="absolute -bottom-7 left-[10%] w-14" />
+        <div
+          id="header-tech-stack"
+          className="flex items-center flex-col mb-8 py-8"
+        >
+          <div className="w-16 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4" />
+          <h1 className="text-2xl lg:text-3xl font-normal text-center text-primaryText">
+            Our
+            <br className="block mt-2 content-['']" />
+            <span className="text-2xl lg:text-3xl font-bold text-primaryText">
+              Tech Stack
+            </span>
+          </h1>
+        </div>
+        <div>
+          <TechStack />
+        </div>
+      </section>
+      <section id="internship" className="mb-20">
+        <div className="w-full">
+          <Internship slides={internship} options={OPTIONS} />
+        </div>
+      </section>
+      <Footer />
     </>
   );
 }
