@@ -6,24 +6,19 @@ import decoArrowDown from "../assets/deco_arrow_down.svg";
 import { motion } from "framer-motion";
 import { Button } from "@nextui-org/react";
 import "@nextui-org/ripple";
-import { StaggeredAnimation, FadeIn } from "../components/AnimateComponent";
+import {
+  StaggeredAnimation,
+  FadeIn,
+  Opacity,
+} from "../components/AnimateComponent";
 import { services } from "../data/services";
-import { EmblaCarousel, Internship } from "../components/Carousel";
+import { EmblaCarousel } from "../components/Carousel";
 import Product from "../components/Product";
 import { products } from "../data/Products";
-import { internship } from "../data/Internship";
 import TechStack from "../components/TechStack";
 import Footer from "../components/Footer";
 
 export default function Home() {
-  const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
-    exit: {
-      opacity: 0,
-    },
-  };
-
   const OPTIONS = { align: "center", loop: true };
 
   const MotionButton = motion(Button);
@@ -36,25 +31,21 @@ export default function Home() {
         <div className="col-span-10 sm:col-span-5 order-2 sm:order-1 pb-20 sm:pb-0 rounded self-center">
           <StaggeredAnimation>
             <motion.h1
-              variants={item}
-              className="text-3xl lg:text-4xl text-left font-extrabold text-primaryText"
+              variants={Opacity}
+              className="text-3xl lg:text-4xl text-left font-extrabold bg-clip-text text-transparent bg-gradient-to-tl from-darkerBlue-400/40 to-darkerBlue-400"
             >
-              Light Code
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-darkerBlue-400/40 to-darkerBlue-400 font-bold">
-                {" "}
-                Digital
-              </span>
+              Light Code Digital
             </motion.h1>
             <motion.p
-              variants={item}
-              className="my-7 sm:my-10 text-sm sm:text-base text-left text-secondaryText"
+              variants={Opacity}
+              className="my-7 sm:my-10 leading-6 sm:leading-7 text-sm sm:text-base text-left text-secondaryText"
             >
               Memberikan solusi untuk semua kebutuhan bisnis Anda terkait
               Teknologi INFORMASI
             </motion.p>
             <div className="flex items-center justify-center sm:justify-start">
               <MotionButton
-                variants={item}
+                variants={Opacity}
                 color="primary"
                 className="px-6 py-[22px]"
               >
@@ -147,11 +138,11 @@ export default function Home() {
           <TechStack />
         </div>
       </section>
-      <section id="internship" className="mb-20">
+      {/* <section id="internship" className="mb-20">
         <div className="w-full">
           <Internship slides={internship} options={OPTIONS} />
         </div>
-      </section>
+      </section> */}
       <Footer />
     </>
   );

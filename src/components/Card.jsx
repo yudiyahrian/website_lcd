@@ -16,8 +16,9 @@ const Card = ({ icon, title, content, isActive }) => {
                 : "bg-gradient-to-bl from-[#F36380] to-[#57007B]"
             } `}
           >
-            <div className="w-full h-full bg-cardBg rounded-full">
+            <div className="w-full h-full bg-cardBg rounded-full flex items-center justify-center">
               {/* Your image goes here */}
+              <img src={icon} alt={title} />
             </div>
           </div>
 

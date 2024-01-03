@@ -27,6 +27,7 @@ export default {
           300: "#ffffea",
           400: "#0E538C",
           500: "#3D63EA",
+          600: "#0B4870",
         },
         primaryText: "#1A202C",
         secondaryText: "#4A5568",
