@@ -11,7 +11,7 @@ import {
   FadeIn,
   Opacity,
 } from "../components/AnimateComponent";
-import { services } from "../data/services";
+import { services } from "../data/Services";
 import { EmblaCarousel } from "../components/Carousel";
 import Product from "../components/Product";
 import { products } from "../data/Products";
@@ -138,11 +138,6 @@ export default function Home() {
           <TechStack />
         </div>
       </section>
-      {/* <section id="internship" className="mb-20">
-        <div className="w-full">
-          <Internship slides={internship} options={OPTIONS} />
-        </div>
-      </section> */}
       <Footer />
     </>
   );

@@ -16,8 +16,8 @@ export default function App() {
 
   const menuItems = [
     { name: "Profile", path: "/profile" },
-    { name: "Products", path: "/products" },
     { name: "Services", path: "/services" },
+    { name: "Products", path: "/products" },
     { name: "Contact", path: "/contact" },
   ];
 

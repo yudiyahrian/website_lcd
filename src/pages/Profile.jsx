@@ -6,7 +6,6 @@ import {
 } from "../components/AnimateComponent";
 import headerImage from "../assets/profile.svg";
 import headerVisiMisi from "../assets/visi.svg";
-import photoPlaceholder from "../assets/photo_placeholder.svg";
 import { useState, useEffect, useRef } from "react";
 import Ellipse from "../assets/Ellipse.svg";
 import Footer from "../components/Footer";
@@ -147,7 +146,7 @@ export default function Profile() {
         id="visi-misi"
         className="grid grid-cols-1 sm:grid-cols-10 gap-y-12 sm:gap-x-10 place-items-center px-10 mb-20"
       >
-        <div className="col-span-10 sm:col-span-10 lg:col-span-5 order-1 rounded pb-0 sm:pb-20">
+        <div className="col-span-10 lg:col-span-5 order-1 rounded pb-0 sm:pb-20">
           <FadeIn>
             <img
               src={headerVisiMisi}
@@ -156,7 +155,7 @@ export default function Profile() {
             />
           </FadeIn>
         </div>
-        <div className="col-span-10 sm:col-span-10 lg:col-span-5 order-2 pb-20 sm:pb-0 rounded self-center">
+        <div className="col-span-10 lg:col-span-5 order-2 pb-20 sm:pb-0 rounded self-center">
           <StaggeredAnimation>
             <div className="grid grid-cols-10 gap-y-5 sm:gap-x-10">
               <div className="col-span-10 sm:max-lg:col-span-5">
@@ -235,31 +234,7 @@ export default function Profile() {
           </StaggeredAnimation>
         </div>
       </section>
-      <section
-        id="organization-structure"
-        className="bg-secondaryBg px-12 py-6 relative mb-20"
-      >
-        <img
-          src={Ellipse}
-          className="absolute -z-10 -bottom-7 left-1/3 md:left-1/4"
-        />
-        <img
-          src={Ellipse}
-          className="absolute -z-10 -top-7 right-1/3 md:right-1/4"
-        />
-        <div
-          id="header-organization-structure"
-          className="flex items-center flex-col mb-8"
-        >
-          <div className="w-16 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4" />
-          <h1 className="text-2xl lg:text-3xl font-bold text-center text-primaryText">
-            Struktur organisasi
-          </h1>
-        </div>
-        <div className="w-full h-[600px] flex items-center justify-center bg-[#EFF2F6]">
-          <img src={photoPlaceholder} alt="struktur organisasi" />
-        </div>
-      </section>
+
       <Footer />
     </>
   );
