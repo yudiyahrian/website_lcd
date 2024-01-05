@@ -164,7 +164,7 @@ const Footer = () => {
       </div>
       <div className="h-[1px] w-full bg-[#E7DAED]"></div>
       <p className="text-xs text-gray-500 flex justify-center mt-4">
-        &copy; 2022. Company Name. All rights reserved.
+        &copy; 2024. Light Code Digital. All rights reserved.
       </p>
     </footer>
   );

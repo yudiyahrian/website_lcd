@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { Opacity } from "../components/AnimateComponent";
 const Product = ({
   background,
   backgroundImage,
@@ -7,7 +9,8 @@ const Product = ({
 }) => {
   return (
     <>
-      <div
+      <motion.div
+        variants={Opacity}
         className={`${background} w-full grid grid-cols-10 border-solid border-1 border-[#E7DAED] rounded-lg mb-6 shadow-cardShadow`}
       >
         <div
@@ -26,7 +29,7 @@ const Product = ({
             Read more..
           </p>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

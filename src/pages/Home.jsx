@@ -11,6 +11,7 @@ import {
   FadeIn,
   Opacity,
 } from "../components/AnimateComponent";
+import { NavLink, useNavigate } from "react-router-dom";
 import { services } from "../data/Services";
 import { EmblaCarousel } from "../components/Carousel";
 import Product from "../components/Product";
@@ -20,6 +21,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   const OPTIONS = { align: "center", loop: true };
+  const navigate = useNavigate();
 
   const MotionButton = motion(Button);
   return (
@@ -48,8 +50,13 @@ export default function Home() {
                 variants={Opacity}
                 color="primary"
                 className="px-6 py-[22px]"
+                onPress={() => {
+                  setTimeout(() => {
+                    navigate("/profile");
+                  }, 200);
+                }}
               >
-                Let’s get started!
+                See our profile
               </MotionButton>
             </div>
           </StaggeredAnimation>
@@ -61,26 +68,36 @@ export default function Home() {
         </div>
       </section>
       <section id="service-carousel" className="relative w-full mb-52">
-        <img src={Ellipse} className="absolute -top-7 left-1/3 md:left-1/4" />
-        <img
-          src={Ellipse}
-          className="absolute -bottom-7 right-1/3 md:right-1/4"
-        />
-        <div className="sandbox__carousel">
-          <EmblaCarousel slides={services} options={OPTIONS} />
-        </div>
-        <img
-          src={Ellipse}
-          className="absolute h-4 w-4 -bottom-24 md:-bottom-52 left-[40%] md:left-1/3 "
-        />
-        <img
-          src={decoArrowDown}
-          className="absolute -bottom-32 md:-bottom-[16.5rem] w-28 md:w-auto right-[15%]"
-        />
-        <img
-          src={decoArrowUp}
-          className="absolute -bottom-20 md:-bottom-[11.5rem] left-[15%] w-28 md:w-auto"
-        />
+        <StaggeredAnimation>
+          <motion.img
+            variants={Opacity}
+            src={Ellipse}
+            className="absolute -top-7 left-1/3 md:left-1/4"
+          />
+          <motion.img
+            variants={Opacity}
+            src={Ellipse}
+            className="absolute -bottom-7 right-1/3 md:right-1/4"
+          />
+          <motion.div variants={Opacity} className="sandbox__carousel">
+            <EmblaCarousel slides={services} options={OPTIONS} />
+          </motion.div>
+          <motion.img
+            variants={Opacity}
+            src={Ellipse}
+            className="absolute h-4 w-4 -bottom-24 md:-bottom-52 left-[40%] md:left-1/3 "
+          />
+          <motion.img
+            variants={Opacity}
+            src={decoArrowDown}
+            className="absolute -bottom-32 md:-bottom-[16.5rem] w-28 md:w-auto right-[15%]"
+          />
+          <motion.img
+            variants={Opacity}
+            src={decoArrowUp}
+            className="absolute -bottom-20 md:-bottom-[11.5rem] left-[15%] w-28 md:w-auto"
+          />
+        </StaggeredAnimation>
       </section>
       <section id="recent-product" className="px-20 mb-10">
         <div className="w-full">
@@ -97,21 +114,26 @@ export default function Home() {
             </h1>
           </div>
           <div id="product-list">
-            {products.map((product, index) => (
-              <Product
-                key={index}
-                background={product.background}
-                backgroundImage={product.backgroundImage}
-                image={product.image}
-                title={product.title}
-                description={product.description}
-              />
-            ))}
+            <StaggeredAnimation>
+              {products.map((product, index) => (
+                <Product
+                  key={index}
+                  background={product.background}
+                  backgroundImage={product.backgroundImage}
+                  image={product.image}
+                  title={product.title}
+                  description={product.description}
+                />
+              ))}
+            </StaggeredAnimation>
           </div>
           <div className="flex justify-end">
-            <p className="font-semibold text-base md:text-lg text-transparent bg-clip-text bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mr-3 sm:mr-4">
-              Read more our products
-            </p>
+            <NavLink
+              to="/products"
+              className="font-semibold text-base md:text-lg text-transparent bg-clip-text bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mr-3 sm:mr-4"
+            >
+              See more our products
+            </NavLink>
             <img src={arrowRight} alt="arrow_right" />
           </div>
         </div>
@@ -120,23 +142,36 @@ export default function Home() {
         id="our-tech-stack"
         className="relative w-full bg-secondaryBg mb-32"
       >
-        <img src={Ellipse} className="absolute -bottom-7 left-[10%] w-14" />
-        <div
-          id="header-tech-stack"
-          className="flex items-center flex-col mb-8 py-8"
-        >
-          <div className="w-16 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4" />
-          <h1 className="text-2xl lg:text-3xl font-normal text-center text-primaryText">
-            Our
-            <br className="block mt-2 content-['']" />
-            <span className="text-2xl lg:text-3xl font-bold text-primaryText">
-              Tech Stack
-            </span>
-          </h1>
-        </div>
-        <div>
-          <TechStack />
-        </div>
+        <StaggeredAnimation>
+          <motion.img
+            variants={Opacity}
+            src={Ellipse}
+            className="absolute -bottom-7 left-[10%] w-14"
+          />
+          <motion.div
+            variants={Opacity}
+            id="header-tech-stack"
+            className="flex items-center flex-col mb-8 py-8"
+          >
+            <motion.div
+              variants={Opacity}
+              className="w-16 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4"
+            />
+            <motion.h1
+              variants={Opacity}
+              className="text-2xl lg:text-3xl font-normal text-center text-primaryText"
+            >
+              Our
+              <br className="block mt-2 content-['']" />
+              <span className="text-2xl lg:text-3xl font-bold text-primaryText">
+                Tech Stack
+              </span>
+            </motion.h1>
+          </motion.div>
+          <motion.div variants={Opacity}>
+            <TechStack />
+          </motion.div>
+        </StaggeredAnimation>
       </section>
       <Footer />
     </>
