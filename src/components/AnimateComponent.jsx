@@ -51,6 +51,7 @@ export function StaggeredAnimation({ children }) {
       opacity: 1,
       transition: {
         when: "beforeChildren",
+        staggerDirection: 1,
         staggerChildren: 0.1,
       },
     },
@@ -58,6 +59,7 @@ export function StaggeredAnimation({ children }) {
       opacity: 0,
       transition: {
         when: "afterChildren",
+        staggerDirection: -1,
         staggerChildren: 0.1,
       },
     },

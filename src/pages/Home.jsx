@@ -101,18 +101,26 @@ export default function Home() {
       </section>
       <section id="recent-product" className="px-20 mb-10">
         <div className="w-full">
-          <div
-            id="header-recent-product"
-            className="flex items-center flex-col mb-8"
-          >
-            <div className="w-16 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4" />
-            <h1 className="text-2xl lg:text-3xl font-normal text-center text-primaryText">
-              Our recent <br className="block mt-2 content-['']" />
-              <span className="text-2xl lg:text-3xl font-bold text-primaryText">
-                Products
-              </span>
-            </h1>
-          </div>
+          <StaggeredAnimation>
+            <div
+              id="header-recent-product"
+              className="flex items-center flex-col mb-8"
+            >
+              <motion.div
+                variants={Opacity}
+                className="w-16 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4"
+              />
+              <motion.h1
+                variants={Opacity}
+                className="text-2xl lg:text-3xl font-normal text-center text-primaryText"
+              >
+                Our recent <br className="block mt-2 content-['']" />
+                <span className="text-2xl lg:text-3xl font-bold text-primaryText">
+                  Products
+                </span>
+              </motion.h1>
+            </div>
+          </StaggeredAnimation>
           <div id="product-list">
             <StaggeredAnimation>
               {products.map((product, index) => (

@@ -1,17 +1,19 @@
 import LcdLogo from "../assets/LCD_FULL_LOGO.svg";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="bg-white">
       <div className="h-[1px] w-full bg-[#E7DAED]"></div>
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+      <div className="mx-auto max-w-screen-xl space-y-8 px-10  py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <img src={LcdLogo} alt="lcd_logo" className="h-12" />
 
             <p className="mt-4 max-w-xs text-gray-500">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
-              cupiditate quae nam molestias.
+              Kami siap membantu mewujudkan visi digital Anda. Hubungi kami
+              sekarang untuk memulai perjalanan menuju solusi teknologi yang
+              inovatif dan efektif.
             </p>
           </div>
 
@@ -21,39 +23,39 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/profile"
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Profile
-                  </a>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/products"
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Products
-                  </a>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/services"
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Services
-                  </a>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/contact"
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Contact
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -64,46 +66,22 @@ const Footer = () => {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="mailto:info@lightcodedigital.com"
                     className="text-gray-700 transition hover:opacity-75"
                   >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    info@lightcodedigital.com
                   </a>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    019238612784
-                  </a>
+                  <p className="text-gray-700">021-7721-0358 (199)</p>
                 </li>
               </ul>
             </div>
             <ul className="mt-8 flex gap-4 items-end justify-start">
               <li>
                 <a
-                  href="/"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-primaryText bg-white shadow-activeCardShadow rounded-full transition hover:opacity-75 p-3 inline-flex"
-                >
-                  <span className="sr-only">Facebook</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    viewBox="0 0 7 12"
-                    fill="currentColor"
-                  >
-                    <path d="M4.9985 1.9925H6.094V0.0845C5.905 0.0585 5.255 0 4.498 0C2.91851 0 1.83651 0.9935 1.83651 2.8195V4.5H0.0935059V6.633H1.83651V12H3.97351V6.6335H5.646L5.9115 4.5005H3.97301V3.031C3.97351 2.4145 4.1395 1.9925 4.9985 1.9925Z" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
+                  href="https://www.instagram.com/lightcodedigital/"
                   rel="noreferrer"
                   target="_blank"
                   className="text-primaryText bg-white shadow-activeCardShadow rounded-full transition hover:opacity-75 p-3 inline-flex"
@@ -139,12 +117,12 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/"
+                  href="https://wa.me/+6287742812548"
                   rel="noreferrer"
                   target="_blank"
                   className="text-primaryText bg-white shadow-activeCardShadow rounded-full transition hover:opacity-75 p-3 inline-flex"
                 >
-                  <span className="sr-only">Instagram</span>
+                  <span className="sr-only">Whatsapp</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
