@@ -3,7 +3,7 @@ import product1 from "../assets/product1.png";
 export const products = [
   {
     background: "bg-[#d7e3fc]",
-    backgroundImage: "bg[#c1d3fe]",
+    backgroundImage: "bg-[#c1d3fe]",
     image: product1,
     title: "Website Design for SCFC Canada",
     description:
@@ -11,7 +11,7 @@ export const products = [
   },
   {
     background: "bg-[#d7e3fc]",
-    backgroundImage: "bg[#c1d3fe]",
+    backgroundImage: "bg-[#c1d3fe]",
     image: product1,
     title: "Website Design for SCFC Canada",
     description:
@@ -19,7 +19,7 @@ export const products = [
   },
   {
     background: "bg-[#d7e3fc]",
-    backgroundImage: "bg[#c1d3fe]",
+    backgroundImage: "bg-[#c1d3fe]",
     image: product1,
     title: "Website Design for SCFC Canada",
     description:

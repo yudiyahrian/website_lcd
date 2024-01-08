@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   StaggeredAnimation,
   FadeIn,
@@ -62,7 +62,7 @@ export default function Profile() {
       >
         <div className="col-span-10 sm:col-span-5 order-2 sm:order-1 pb-20 sm:pb-0 rounded self-center">
           <StaggeredAnimation>
-            <motion.h1
+            <m.h1
               variants={Opacity}
               className="text-3xl lg:text-4xl text-left font-extrabold text-primaryText"
             >
@@ -71,15 +71,15 @@ export default function Profile() {
                 {" "}
                 Light Code Digital
               </span>
-            </motion.h1>
-            <motion.p
+            </m.h1>
+            <m.p
               variants={Opacity}
               className="my-7 sm:my-10 leading-6 sm:leading-7 text-sm sm:text-base text-left text-secondaryText"
             >
               Kami adalah perusahaan Teknologi Informasi yang bergerak dan fokus
               di bidang pegembangan perangkat lunak, konsultasi IT dan resource
               sharing.
-            </motion.p>
+            </m.p>
           </StaggeredAnimation>
         </div>
         <div className="col-span-10 sm:col-span-5 order-1 sm:order-2 rounded pb-0 sm:pb-20">
@@ -93,29 +93,29 @@ export default function Profile() {
         className="bg-secondaryBg px-12 py-6 relative mb-20"
       >
         <StaggeredAnimation>
-          <motion.img
+          <m.img
             variants={Opacity}
             src={Ellipse}
             className="absolute -z-10 -top-7 left-1/3 md:left-1/4"
           />
-          <motion.img
+          <m.img
             variants={Opacity}
             src={Ellipse}
             className="absolute -z-10 -bottom-7 right-1/3 md:right-1/4"
           />
           <div id="header-about-us" className="flex items-center flex-col mb-8">
-            <motion.div
+            <m.div
               variants={Opacity}
               className="w-16 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4"
             />
-            <motion.h1
+            <m.h1
               variants={Opacity}
               className="text-2xl lg:text-3xl font-bold text-center text-primaryText"
             >
               Tentang kami
-            </motion.h1>
+            </m.h1>
           </div>
-          <motion.p
+          <m.p
             variants={Opacity}
             ref={ref}
             className={`my-7 leading-6 sm:leading-7 sm:my-10 text-sm sm:text-base text-left text-secondaryText ${
@@ -130,15 +130,15 @@ export default function Profile() {
             solusi untuk semua kebutuhan bisnis Anda akan solusi Teknologi
             Informasi. Fokus pencapaian kami adalah pada hasil yang berkualitas
             dan kepuasan pelanggan.
-          </motion.p>
+          </m.p>
           {isTruncated && (
-            <motion.button
+            <m.button
               variants={Opacity}
               onClick={toggleIsShowingMore}
               className="text-base text-left text-darkerBlue-600 cursor-pointer"
             >
               {isShowingMore ? "Show less" : "Show more"}
-            </motion.button>
+            </m.button>
           )}
         </StaggeredAnimation>
       </section>
@@ -163,18 +163,18 @@ export default function Profile() {
                   id="header-visi"
                   className="flex items-start flex-col mb-4"
                 >
-                  <motion.div
+                  <m.div
                     variants={Opacity}
                     className="w-14 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4"
                   />
-                  <motion.h1
+                  <m.h1
                     variants={Opacity}
                     className="text-2xl lg:text-3xl font-bold text-left text-primaryText"
                   >
                     Visi
-                  </motion.h1>
+                  </m.h1>
                 </div>
-                <motion.p
+                <m.p
                   variants={Opacity}
                   className="my-3 leading-6 sm:leading-7 sm:my-5 text-sm sm:text-base text-left text-secondaryText"
                 >
@@ -184,26 +184,26 @@ export default function Profile() {
                   bersaing dalam dunia global. Dengan berfokus pada pengembangan
                   perangkat lunak, resources sharing, sistem integrasi dan
                   konsultasi IT.
-                </motion.p>
+                </m.p>
               </div>
               <div className="col-span-10 sm:max-lg:col-span-5 ">
                 <div
                   id="header-misi"
                   className="flex items-start flex-col mb-4"
                 >
-                  <motion.div
+                  <m.div
                     variants={Opacity}
                     className="w-14 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4"
                   />
-                  <motion.h1
+                  <m.h1
                     variants={Opacity}
                     className="text-2xl lg:text-3xl font-bold text-left text-primaryText"
                   >
                     Misi
-                  </motion.h1>
+                  </m.h1>
                 </div>
                 <ul className="list-disc">
-                  <motion.li
+                  <m.li
                     variants={Opacity}
                     className="my-3 leading-6 sm:leading-7 sm:my-5 text-sm sm:text-base text-left text-secondaryText"
                   >
@@ -211,8 +211,8 @@ export default function Profile() {
                     dalam berkomunikasi guna mengumpulkan informasi terkait
                     dengan kebutuhan klien agar menghasilkan produk/solusi yang
                     tepat dan sesuai.
-                  </motion.li>
-                  <motion.li
+                  </m.li>
+                  <m.li
                     variants={Opacity}
                     className="my-3 leading-6 sm:leading-7 sm:my-5 text-sm sm:text-base text-left text-secondaryText"
                   >
@@ -220,14 +220,14 @@ export default function Profile() {
                     pengembangan perangkat lunak sampai pada sistem dapat
                     digunakan dan berjalan dengan baik serta melakukan
                     maintenance pada sistem.
-                  </motion.li>
-                  <motion.li
+                  </m.li>
+                  <m.li
                     variants={Opacity}
                     className="my-3 leading-6 sm:leading-7 sm:my-5 text-sm sm:text-base text-left text-secondaryText"
                   >
                     Melayani konsultasi IT guna meningkatkan efektivitas,
                     efesiensi dan produktivitas bisnis perusahaan.
-                  </motion.li>
+                  </m.li>
                 </ul>
               </div>
             </div>

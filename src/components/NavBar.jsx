@@ -32,7 +32,12 @@ export default function App() {
     >
       <NavbarContent>
         <NavbarBrand>
-          <NavLink to="/">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "pointer-events-none" : ""
+            }
+          >
             <img src={LcdLogo} className="h-10 sm:h-12" alt="Lcd Logo" />
           </NavLink>
         </NavbarBrand>

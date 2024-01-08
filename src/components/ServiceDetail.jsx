@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   StaggeredAnimation,
   FadeIn,
@@ -7,7 +7,7 @@ import {
 
 const DetailList = ({ icon, title, description }) => {
   return (
-    <motion.div variants={Opacity} className="flex gap-6 mb-5">
+    <m.div variants={Opacity} className="flex gap-6 mb-5">
       <div className="min-w-[48px] h-12 bg-mainBlue-500 rounded-lg flex justify-center items-center">
         <img src={icon} alt="icon" className="h-6" />
       </div>
@@ -19,7 +19,7 @@ const DetailList = ({ icon, title, description }) => {
           {description}
         </p>
       </div>
-    </motion.div>
+    </m.div>
   );
 };
 
@@ -38,23 +38,23 @@ const ServiceDetail = ({ service, isReverse }) => {
               id={`header-services-${service.title}`}
               className="flex items-start justify-start flex-col mb-2 col-span-10"
             >
-              <motion.div
+              <m.div
                 variants={Opacity}
                 className="w-14 h-1 bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mb-4"
               />
-              <motion.h1
+              <m.h1
                 variants={Opacity}
                 className="text-2xl lg:text-3xl font-bold text-left text-primaryText"
               >
                 {service.title}
-              </motion.h1>
+              </m.h1>
             </div>
-            <motion.p
+            <m.p
               variants={Opacity}
               className="my-3 col-span-10 lg:col-span-5 text-sm sm:text-base text-left text-secondaryText"
             >
               {service.content}
-            </motion.p>
+            </m.p>
           </div>
         </StaggeredAnimation>
       </div>
