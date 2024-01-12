@@ -29,7 +29,7 @@ export default function Contact() {
       </section>
       <section
         id="contact-information"
-        className="bg-secondaryBg grid grid-cols-10 items-center px-16 sm:px-10 max-lg:gap-9 py-16 mb-20"
+        className="bg-secondaryBg grid grid-cols-10 items-center px-10 max-lg:gap-9 py-16 mb-20"
       >
         <div className="col-span-10 sm:col-span-5 max-w-lg place-self-start sm:place-self-center">
           <StaggeredAnimation>

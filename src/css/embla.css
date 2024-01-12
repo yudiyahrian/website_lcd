@@ -22,6 +22,14 @@
   padding-bottom: 15px;
   align-items: center;
 }
+.screenshot__container {
+  backface-visibility: hidden;
+  display: flex;
+  flex: wrap;
+  touch-action: pan-y;
+  align-items: center;
+  padding-left: 100px;
+}
 .embla__slide {
   min-width: calc(100% / 1);
   padding-left: 25px;
@@ -38,12 +46,36 @@
   position: relative;
 }
 
+.screenshot {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  /* height: 560px; */
+}
+
 .embla__buttons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-right: 2.5rem;
   margin-bottom: 3rem;
+}
+
+.screenshot__buttons {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .embla__button__svg {
@@ -113,5 +145,8 @@
   }
   .internship {
     min-width: calc(100% / 7);
+  }
+  .screenshot {
+    height: 560px;
   }
 }

@@ -42,6 +42,7 @@ export default function Products() {
               image={product.image}
               title={product.title}
               description={product.description}
+              slug={product.slug}
             />
           ))}
         </StaggeredAnimation>

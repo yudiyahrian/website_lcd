@@ -1,11 +1,13 @@
 import { m } from "framer-motion";
 import { Opacity } from "../components/AnimateComponent";
+import { NavLink } from "react-router-dom";
 const Product = ({
   background,
   backgroundImage,
   image,
   title,
   description,
+  slug,
 }) => {
   return (
     <>
@@ -25,9 +27,12 @@ const Product = ({
           <p className="font-normal text-xs sm:text-sm text-secondaryText line-clamp-5 mb-6 sm:mb-10">
             {description}
           </p>
-          <p className="font-semibold text-xs md:text-sm text-end text-transparent bg-clip-text bg-gradient-to-bl from-[#F36380] to-[#57007B] mr-3 sm:mr-4">
+          <NavLink
+            to={`/product/${slug}`}
+            className="font-semibold text-xs md:text-sm flex justify-end text-transparent bg-clip-text bg-gradient-to-bl from-[#F36380] to-[#57007B] mr-3 sm:mr-4"
+          >
             Read more..
-          </p>
+          </NavLink>
         </div>
       </m.div>
     </>
@@ -40,6 +45,7 @@ Product.defaultProps = {
   image: "",
   title: "title",
   description: "description",
+  slug: "",
 };
 
 export default Product;

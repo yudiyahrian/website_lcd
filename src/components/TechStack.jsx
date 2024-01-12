@@ -31,7 +31,10 @@ const TechStack = () => {
         {techStacks
           .filter((techStack) => techStack.category === category)
           .map((techStack, index) => (
-            <div className="flex-[0_0_15%] m-6 flex justify-center" key={index}>
+            <div
+              className="flex-[0_0_15%] m-6 flex justify-center h-14"
+              key={index}
+            >
               <img src={techStack.image} alt={techStack.name} />
             </div>
           ))}

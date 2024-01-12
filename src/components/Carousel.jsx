@@ -59,7 +59,7 @@ export const EmblaCarousel = (props) => {
   return (
     <div className="embla">
       <h1 className="flex justify-center text-2xl lg:text-3xl font-bold text-primaryText pb-9">
-        Services we offer
+        Layanan kami
       </h1>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
@@ -96,7 +96,7 @@ export const EmblaCarousel = (props) => {
           <p className="font-semibold text-base md:text-lg text-transparent bg-clip-text bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mr-3 sm:mr-4">
             Read more our services
           </p>
-          <img src={arrowRight} alt="arrow_right" />
+          <img src={arrowRight} alt="arrow_right" className="shadow-large" />
         </NavLink>
       </div>
     </div>
@@ -161,6 +161,56 @@ export const Internship = (props) => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const ScreenshotCarousel = (props) => {
+  const { slides, options } = props;
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
+
+  const onSelect = useCallback((emblaApi) => {
+    setPrevBtnDisabled(!emblaApi.canScrollPrev());
+    setNextBtnDisabled(!emblaApi.canScrollNext());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect(emblaApi);
+    emblaApi.on("reInit", onSelect);
+    emblaApi.on("select", onSelect);
+  }, [emblaApi, onSelect]);
+  return (
+    <>
+      <div className="sandbox__carousel">
+        <div className="embla">
+          <div className="embla__viewport" ref={emblaRef}>
+            <div className="screenshot__container">
+              {slides.map((screenshot, index) => (
+                <div className="screenshot" key={index}>
+                  <img src={screenshot} alt={`screenshot-${index}`} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="screenshot__buttons">
+            <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+            <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
           </div>
         </div>
       </div>

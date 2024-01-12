@@ -13,7 +13,7 @@ export const PrevButton = (props) => {
 
   return (
     <button
-      className="border-2 border-darkerBlue-500 text-darkerBlue-500 p-[8px] cursor-pointer rounded-full mr-3 hover:bg-darkerBlue-500 hover:text-white transition-all embla__button--prev"
+      className="border-2 border-darkerBlue-500 text-darkerBlue-500 p-[8px] cursor-pointer rounded-full hover:bg-darkerBlue-500 hover:text-white transition-all embla__button--prev disabled:bg-darkerBlue-500 disabled:text-white"
       type="button"
       {...restProps}
     >
@@ -37,7 +37,7 @@ export const NextButton = (props) => {
 
   return (
     <button
-      className="border-2 border-darkerBlue-500 text-darkerBlue-500 p-[8px] cursor-pointer rounded-full hover:bg-darkerBlue-500 hover:text-white transition-all embla__button--next"
+      className="border-2 border-darkerBlue-500 text-darkerBlue-500 p-[8px] cursor-pointer rounded-full hover:bg-darkerBlue-500 hover:text-white transition-all embla__button--next disabled:bg-darkerBlue-500 disabled:text-white"
       type="button"
       {...restProps}
     >

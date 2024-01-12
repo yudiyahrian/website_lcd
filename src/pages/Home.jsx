@@ -55,7 +55,7 @@ export default function Home() {
                   }, 200);
                 }}
               >
-                See our profile
+                Lihat profil kami
               </MotionButton>
             </div>
           </StaggeredAnimation>
@@ -111,12 +111,10 @@ export default function Home() {
               />
               <m.h1
                 variants={Opacity}
-                className="text-2xl lg:text-3xl font-normal text-center text-primaryText"
+                className="text-2xl lg:text-3xl font-bold text-center text-primaryText"
               >
-                Our recent <br className="block mt-2 content-['']" />
-                <span className="text-2xl lg:text-3xl font-bold text-primaryText">
-                  Products
-                </span>
+                Produk <br className="block mt-2 content-['']" />
+                <span className="font-normal">Baru Kami</span>
               </m.h1>
             </div>
           </StaggeredAnimation>
@@ -130,19 +128,22 @@ export default function Home() {
                   image={product.image}
                   title={product.title}
                   description={product.description}
+                  slug={product.slug}
                 />
               ))}
             </StaggeredAnimation>
           </div>
-          <div className="flex justify-end">
-            <NavLink
-              to="/products"
-              className="font-semibold text-base md:text-lg text-transparent bg-clip-text bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mr-3 sm:mr-4"
-            >
-              See more our products
-            </NavLink>
-            <img src={arrowRight} alt="arrow_right" />
-          </div>
+          <FadeIn>
+            <div className="flex justify-end">
+              <NavLink
+                to="/products"
+                className="font-semibold text-base md:text-lg text-transparent bg-clip-text bg-gradient-to-bl from-mainBlue-700 to-darkerBlue-400 mr-3 sm:mr-4"
+              >
+                See more our products
+              </NavLink>
+              <img src={arrowRight} alt="arrow_right" />
+            </div>
+          </FadeIn>
         </div>
       </section>
       <section
@@ -166,13 +167,10 @@ export default function Home() {
             />
             <m.h1
               variants={Opacity}
-              className="text-2xl lg:text-3xl font-normal text-center text-primaryText"
+              className="text-2xl lg:text-3xl font-bold text-center text-primaryText"
             >
-              Our
-              <br className="block mt-2 content-['']" />
-              <span className="text-2xl lg:text-3xl font-bold text-primaryText">
-                Tech Stack
-              </span>
+              Teknologi <br className="block mt-2 content-['']" />
+              <span className="font-normal">Yang Kami Gunakan</span>
             </m.h1>
           </m.div>
           <m.div variants={Opacity}>
